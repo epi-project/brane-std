@@ -9,7 +9,7 @@ For a brief overview, see the table [below](#overview).
 
 To download a package, you can run the following command on your local machine (we assume that you have the [Brane Command-Line Interface](https://github.com/epi-project/brane/releases/latest) installed):
 ```bash
-brane import https://github.com/epi-project/brane-std ./<package_name>/container.yml
+brane import epi-project/brane-std ./<package_name>/container.yml
 ```
 where you should replace `<package_name>` with the name of the package you like to install (e.g., `cat`).
 

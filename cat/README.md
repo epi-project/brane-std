@@ -9,7 +9,7 @@ For binary datasets, it provides the `cat_base64` function, which returns the da
 ## Installation
 To install this package, simply run the following command in your terminal (we assume that Brane's Command-Line Interface is installed):
 ```bash
-brane import https://github.com/epi-project/brane-std --file ./cat/container.yml
+brane import epi-project/brane-std ./cat/container.yml
 ```
 Don't forget to push the package to the remote repository if you want to use it in a (public) Brane instance.
 
