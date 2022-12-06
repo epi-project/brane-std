@@ -13,7 +13,7 @@ brane import https://github.com/epi-project/brane-std ./<package_name>/container
 ```
 where you should replace `<package_name>` with the name of the package you like to install (e.g., `cat`).
 
-> Tip: If you are running an unreleased version of Brane, you can add `--init <path/to/branelet>` to use a custom-compiled `branelet` executable, just as you can with `brane build`.
+> <img src="./assets/img/info.png" alt="info" width="16" style="margin-top: 3px; margin-bottom: -3px;"/> If you are running an unreleased version of Brane, you can add `--init <path/to/branelet>` to use a custom-compiled `branelet` executable, just as you can with `brane build`.
 
 
 ## Overview
@@ -22,6 +22,6 @@ This repository currently includes the following packages:
 
 
 ## Contributing
-If you like to contribute to this repository by adding your own package, please make a pull request where you provide your package in the same structure as provided above (see the `new_package` template). Please use `TEMPLATE.md` to write the README for your package, and include a `CHANGELOG.md` based on [this](https://keepachangelog.com/en/1.0.0/) format so users can see what has changed.
+If you like to contribute to this repository by adding your own package, please make a pull request where you provide your package in the same structure as provided above. Please use `TEMPLATE.md` to write the README for your package, and include a `CHANGELOG.md` based on [this](https://keepachangelog.com/en/1.0.0/) format so users can see what has changed.
 
 If you have suggestions about the individual packages, feel free to raise issues or create pull requests as well. Any help is appreciated!

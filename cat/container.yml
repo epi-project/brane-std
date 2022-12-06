@@ -1,0 +1,89 @@
+# CONTAINER.yml
+#   by Tim Müller
+# 
+# This file implements the `cat` package (see the README.md).
+# 
+
+# Define the file metadata
+name: cat
+version: 1.0.0
+kind: ecu
+
+# Define the files part of this package
+files:
+- code.py
+
+# Defines the file to call whenever a function is called
+entrypoint:
+  kind: task
+  exec: code.py
+
+# Define the dependencies
+dependencies:
+- python3
+
+# Define the actions
+actions:
+  # The `func cat(dataset, path)` function
+  cat:
+    command:
+      args:
+      - cat
+    input:
+    - name: dataset
+      type: IntermediateResult
+    - name: nested_path
+      type: string
+    output:
+    - name: output
+      type: string
+
+  # The `func cat_base64(dataset, path)` function
+  cat_base64:
+    command:
+      args:
+      - cat_base64
+    input:
+    - name: dataset
+      type: IntermediateResult
+    - name: nested_path
+      type: string
+    output:
+    - name: output
+      type: string
+
+  # The `func cat_range(dataset, path, start, end)` function
+  cat_range:
+    command:
+      args:
+      - cat_range
+    input:
+    - name: dataset
+      type: IntermediateResult
+    - name: nested_path
+      type: string
+    - name: start
+      type: int
+    - name: end
+      type: int
+    output:
+    - name: output
+      type: string
+
+  # The `func cat_range_base64(dataset, path, start, end)` function
+  cat_range_base64:
+    command:
+      args:
+      - cat_range_base64
+    input:
+    - name: dataset
+      type: IntermediateResult
+    - name: nested_path
+      type: string
+    - name: start
+      type: int
+    - name: end
+      type: int
+    output:
+    - name: output
+      type: string
