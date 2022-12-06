@@ -25,3 +25,7 @@ This repository currently includes the following packages:
 If you like to contribute to this repository by adding your own package, please make a pull request where you provide your package in the same structure as provided above. Please use `TEMPLATE.md` to write the README for your package, and include a `CHANGELOG.md` based on [this](https://keepachangelog.com/en/1.0.0/) format so users can see what has changed.
 
 If you have suggestions about the individual packages, feel free to raise issues or create pull requests as well. Any help is appreciated!
+
+
+## Attribution
+The icons used in this repository (<img src="./assets/img/info.png" alt="info" width="16" style="margin-top: 3px; margin-bottom: -3px;"/>, <img src="./assets/img/warning.png" alt="warning" width="16" style="margin-top: 3px; margin-bottom: -3px;"/>) are provided by [Flaticon](https://flaticon.com).
