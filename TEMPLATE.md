@@ -39,3 +39,12 @@ This package contributes the following functions:
     - \<...\>
   - _Output result:_
     - `\<provide a description of the produced output format for this function if any\>
+
+
+## Examples
+\<DESCRIPTION\>
+```branescript
+<EXAMPLE>
+```
+
+\<...\>
