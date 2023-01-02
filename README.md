@@ -20,6 +20,7 @@ where you should replace `<package_name>` with the name of the package you like 
 This repository currently includes the following packages:
 - `hello_world`: A package that contains the simplest function of all. Used in the [official Wiki](https://wiki.enablingpersonalizedinterventions.nl).
 - `cat`: A package for quickly inspecting dataset contents. Used in the [official Wiki](https://wiki.enablingpersonalizedinterventions.nl).
+- `copy_result`: A "necessary evil" package that takes an intermediate result and renames it. Necessary if you are writing to the same result as you're reading from (i.e., a loop).
 
 
 ## Contributing
