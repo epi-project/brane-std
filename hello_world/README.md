@@ -20,10 +20,10 @@ This package does not define any custom classes.
 
 ## Functions
 This package contributes the following functions:
-- `func hello_world(self)`
+- `func hello_world()`
   - _Description:_ Returns the string `"Hello, world!"`.
-  - _Arguments:_
-    - `self: HelloWorld`: Reference to this HelloWorld instance.
+  - _Output:_
+    - `string`: Will be equal to `"Hello, world!"`.
 
 
 ## Examples

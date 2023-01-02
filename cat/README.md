@@ -30,6 +30,8 @@ This package contributes the following functions:
   - _Arguments:_
     - `data: IntermediateResult`: The input dataset / intermediate result to inspect.
     - `nested_path: string`: The path of the file within the input dataset, relative to the dataset's root. Use `-` (a single dash) if the dataset is directly packaging a file and not a directory.
+  - _Output:_
+    - `string`: The contents of the specified file, as a plain string.
   - _Input datasets/results:_
     - `data`: The given input dataset should have a relatively small, UTF-8 encoded file present at the given `nested_path`.
 
@@ -39,6 +41,8 @@ This package contributes the following functions:
   - _Arguments:_
     - `data: IntermediateResult`: The input dataset / intermediate result to inspect.
     - `nested_path: string`: The path of the file within the input dataset, relative to the dataset's root. Use `-` (a single dash) if the dataset is directly packaging a file and not a directory.
+  - _Output:_
+    - `string`: The contents of the specified file, as a Base64-encoded string.
   - _Input datasets/results:_
     - `data`: The given input dataset should have a (relatively small) file present at the given `nested_path`.
 
@@ -50,6 +54,8 @@ This package contributes the following functions:
     - `nested_path: string`: The path of the file within the input dataset, relative to the dataset's root. Use `-` (a single dash) if the dataset is directly packaging a file and not a directory.
     - `start: int`: The start index of the range to read. This is the number of characters (i.e., bytes) since the start of the file. Inclusive, and automatically clipped to the appropriate end of the file if out-of-range. Assumes an empty range if `start` < `end`.
     - `end: int`: The end index of the range to read. This is the number of characters (i.e., bytes) since the start of the file. Inclusive, and automatically clipped to the appropriate end of the file if out-of-range. Assumes an empty range if `start` < `end`.
+  - _Output:_
+    - `string`: The contents of the specified file, as a plain string.
   - _Input datasets/results:_
     - `data`: The given input dataset should have an UTF-8 encoded file present at the given `nested_path`.
 
@@ -60,5 +66,7 @@ This package contributes the following functions:
     - `nested_path: string`: The path of the file within the input dataset, relative to the dataset's root. Use `-` (a single dash) if the dataset is directly packaging a file and not a directory.
     - `start: int`: The start index of the range to read. This is the number of characters (i.e., bytes) since the start of the file. Inclusive, and automatically clipped to the appropriate end of the file if out-of-range. Assumes an empty range if `start` < `end`.
     - `end: int`: The end index of the range to read. This is the number of characters (i.e., bytes) since the start of the file. Inclusive, and automatically clipped to the appropriate end of the file if out-of-range. Assumes an empty range if `start` < `end`.
+  - _Output:_
+    - `string`: The contents of the specified file, as a Base64-encoded string.
   - _Input datasets/results:_
     - `data`: The given input dataset should have a file present at the given `nested_path`.

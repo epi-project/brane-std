@@ -34,6 +34,8 @@ This package contributes the following functions:
   - _Arguments:_
     - `<ARG>: <BRANE TYPE>`: \<DESCRIPTION\>
     - \<...\>
+  - _Output:_
+    - `<BRANE TYPE>`: \<DESCRIPTION\>
   - _Input datasets/results:_
     - `<ARG>`: \<provide a description of the expected dataset format for this argument\>
     - \<...\>
