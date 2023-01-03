@@ -1,10 +1,11 @@
+#!/bin/bash
 # COPY.sh
 #   by Lut99
 #
 # Created:
 #   02 Jan 2023, 16:39:22
 # Last edited:
-#   02 Jan 2023, 16:50:10
+#   03 Jan 2023, 10:10:51
 # Auto updated?
 #   Yes
 #
@@ -19,7 +20,7 @@
 #
 
 # Get the input arguments by removing their quotes (since they are strings)
-source=$(echo "${RESULT@Q}" | jq -r '.')
+source=$(echo "${RESULT:q}" | jq -r '.')
 
 # Switch on whether the input is a file or directory
 if [[ -d "$source" ]]; then
