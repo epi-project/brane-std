@@ -5,7 +5,7 @@
 # Created:
 #   02 Jan 2023, 16:39:22
 # Last edited:
-#   03 Jan 2023, 10:10:51
+#   03 Jan 2023, 10:33:22
 # Auto updated?
 #   Yes
 #
@@ -24,7 +24,7 @@ source=$(echo "${RESULT:q}" | jq -r '.')
 
 # Switch on whether the input is a file or directory
 if [[ -d "$source" ]]; then
-    cp -rf "$source/*" "/result/"
+    cp -rf "$source"/* "/result/"
 else
     # Copy the source directly
     cp -rf "$source" "/result/"

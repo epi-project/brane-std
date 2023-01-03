@@ -20,7 +20,7 @@ This is due to Brane eagerly wiping intermediate results before they are being h
 
 To circumvent this issue until a good fix is found, the `copy_result` package is introduced.
 
-This package abuses Brane's result naming scheme to decouple the input of a function from its output. Specifically, it provides a single function (`copy_result`) that takes and IntermediateResult and outputs an IntermediateResult. Internally, all it does is copying the data from the given one to the output one.
+This package abuses Brane's result naming scheme to decouple the input of a function from its output. Specifically, it provides a single function (`copy_result`) that takes an IntermediateResult and outputs another IntermediateResult that is a copy of the given one.
 
 This may seem silly, but this fixed the bug above when we apply it to the result of `processing_function`:
 ```branescript
@@ -52,7 +52,7 @@ This package does not define any custom classes.
 ## Functions
 This package contributes the following functions:
 - `func copy_result(result)`
-  - _Description:_ Copies the given `result` into a new `result`, decoupling it from itself (see the [description](#copy-result) why this is useful).
+  - _Description:_ Copies the given `result` into a new IntermediateResult, decoupling it from itself (see the [introduction](#copy-result) on why this is useful).
   - _Arguments:_
     - `result: IntermediateResult`: The input result to copy.
   - _Output:_
@@ -64,15 +64,18 @@ This package contributes the following functions:
 
 
 ## Examples
-A more concise example as given in the introduction:
+A more concise example using the [data_init](/epi-project/brane-std/data_init) and the [data_math](/epi-project/brane-std/data_math) packages:
 ```branescript
-import initialization; // Provides `zero()`
-import data_math;      // Provides `add_constant()`
-import copy_result;    // Provides `copy_result()`
+import data_init;     // Provides 'zeroes()`
+import data_math;     // Provides 'add_const()'
+import copy_result;   // Provides 'copy_result()'
 
-// This will create a dataset with 0 + 1 + 2 + ... + 9 = 45
-let sum := zero();
+// Initialize the dataset
+let data := zeroes(1);
+
+// Add 'i' to the dataset every iteration
 for (let i := 0; i < 10; i++) {
-    sum := copy_result(add_constant(sum, i));
+    // We need 'copy_result()' for this to decouple the in- and outputs
+    data := copy_result(add_const(data, i));
 }
 ```
