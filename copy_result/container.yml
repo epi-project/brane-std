@@ -9,6 +9,9 @@ name: copy_result
 version: 1.0.0
 kind: ecu
 
+# Provides a brief description
+description: Patchwork package to decouple an input intermediate result from an output result. See https://github.com/epi-project/brane-std.
+
 # Define the files part of this package
 files:
 - copy.sh

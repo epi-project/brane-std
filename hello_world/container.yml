@@ -14,6 +14,9 @@ name: hello_world
 version: 1.0.0
 kind: ecu
 
+# Provides a brief description
+description: The simplest of packages, for testing purposes. See https://github.com/epi-project/brane-std.
+
 # Specify the files that are part of the package. All entries will be resolved to relative to the container.yml file (by default)
 files:
 - hello_world.sh

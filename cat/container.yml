@@ -9,6 +9,9 @@ name: cat
 version: 1.0.0
 kind: ecu
 
+# Provides a brief description
+description: A package containing functions for inspecting data or intermediate result files. See https://github.com/epi-project/brane-std.
+
 # Define the files part of this package
 files:
 - code.py
