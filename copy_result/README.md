@@ -1,5 +1,5 @@
 # Copy Result
-**v1.0.0** - **By the Brane Development Team**
+**v1.1.0** - **By the Brane Development Team**
 
 Currently, Brane has a feature that is very unfortunate.
 
@@ -56,7 +56,7 @@ This package contributes the following functions:
   - _Arguments:_
     - `result: IntermediateResult`: The input result to copy.
   - _Output:_
-    - `IntermediateResult`: The output result that is a clone of the input.
+    - `IntermediateResult`: The output result that is a clone of the input. If the input is a single file, then the output will still be a directory, with a single file `contents` that has the original contents.
   - _Input datasets/results:_
     - `result`: Any IntermediateResult is accepted, as long as its contents can be copied using a simple `cp -rf ...` command.
   - _Output result:_
@@ -64,7 +64,7 @@ This package contributes the following functions:
 
 
 ## Examples
-A more concise example using the [data_init](/epi-project/brane-std/data_init) and the [data_math](/epi-project/brane-std/data_math) packages:
+A more concise example using the [data_init](/epi-project/brane-std/tree/main/data_init) and the [data_math](/epi-project/brane-std/tree/main/data_math) packages:
 ```branescript
 import data_init;     // Provides 'zeroes()`
 import data_math;     // Provides 'add_const()'
@@ -78,4 +78,20 @@ for (let i := 0; i < 10; i++) {
     // We need 'copy_result()' for this to decouple the in- and outputs
     data := copy_result(add_const(data, i));
 }
+```
+
+Another example, that uses the [cat](/epi-project/brane-std/tree/main/cat) package to show the difference when copying single-file datasets:
+```branescript
+import cat;           // Provides 'cat()'
+import copy_result;   // Provides 'copy_result()'
+
+// The dataset is a single-file
+let data := new Data{ name := "some_single_file_data" };
+println(cat(data, "-"));
+
+// Copy it
+let copy := copy_result(data);
+
+// Now we have to inspect the "contents" file instead of the root:
+println(cat(data, "contents"));   // Should print the same as above
 ```
