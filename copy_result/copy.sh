@@ -26,6 +26,6 @@ source=$(echo "${RESULT:q}" | jq -r '.')
 if [[ -d "$source" ]]; then
     cp -rf "$source"/* "/result/"
 else
-    # Copy the source directly
-    cp -rf "$source" "/result/"
+    # Copy the source directly to a 'contents' file
+    cp -rf "$source" "/result/contents"
 fi
