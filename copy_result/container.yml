@@ -6,7 +6,7 @@
 
 # Define the file metadata
 name: copy_result
-version: 1.0.0
+version: 1.1.0
 kind: ecu
 
 # Provides a brief description
