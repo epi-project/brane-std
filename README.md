@@ -18,9 +18,11 @@ where you should replace `<package_name>` with the name of the package you like 
 
 ## Overview
 This repository currently includes the following packages:
-- `hello_world`: A package that contains the simplest function of all. Used in the [official Wiki](https://wiki.enablingpersonalizedinterventions.nl).
 - `cat`: A package for quickly inspecting dataset contents. Used in the [official Wiki](https://wiki.enablingpersonalizedinterventions.nl).
 - `copy_result`: A "necessary evil" package that takes an intermediate result and renames it. Necessary if you are writing to the same result as you're reading from (i.e., a loop).
+- `data_init`: A package that contains functions for generating intermediate results of various shapes.
+- `data_math`: A package that contains functions for doing arithmetic on datasets or intermediate results of a certain shape.
+- `hello_world`: A package that contains the simplest function of all. Used in the [official Wiki](https://wiki.enablingpersonalizedinterventions.nl).
 
 
 ## Contributing

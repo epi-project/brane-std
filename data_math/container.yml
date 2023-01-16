@@ -1,0 +1,45 @@
+# CONTAINER.yml
+#   by Tim Müller
+# 
+# This file implements the `data_math` package (see the README.md).
+# 
+
+# Define the file metadata
+name: data_math
+version: 1.0.0
+kind: ecu
+
+# Provides a brief description
+description: Provides various functions that performs arithmetic operations on a dataset. See https://github.com/epi-project/brane-std.
+
+# Define the files part of this package
+files:
+- entrypoint.sh
+- add_const.py
+
+# Defines the file to call whenever a function is called
+entrypoint:
+  kind: task
+  exec: entrypoint.sh
+
+# Define the dependencies
+dependencies:
+- python3
+
+# Define the actions
+actions:
+  # The `func add_const(data, const, kind)` function
+  add_const:
+    command:
+      args:
+      - add_const
+    input:
+    - name: data
+      type: IntermediateResult
+    - name: const
+      type: real
+    - name: kind
+      type: string
+    output:
+    - name: output
+      type: IntermediateResult
